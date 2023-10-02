@@ -9,6 +9,10 @@ func main(){
 	makedMap["brand"] = "Lenovo"
 	makedMap["procsessor"] = "Intel Celeron"
 
+	for k, v := range myMap {
+		fmt.Println(k, v)
+	}
+}
 /* 	val1, ok1 := myMap[1]
 	check1, ok2 := myMap[5]
 	println(val1, ok1)
@@ -21,9 +25,5 @@ func main(){
 	// println("myMap changed!")
 	// fmt.Println(otherMap)
 
-	for k, v := range myMap {
-		fmt.Println(k, v)
-	}
 
 	// fmt.Printf("\t%v\n", makedMap) // show map
-}
