@@ -1,9 +1,9 @@
 package main
 
 import (
-	"errors"
+	// "errors"
 	"fmt"
-	"math"
+	// "math"
 	"time"
 )
 
@@ -167,28 +167,61 @@ func Sum(x, y int) int {
 	return x + y
 }
 
+/*
 func sqrt(x float64) (float64, error) {
 	if x < 0 {
 		return 0, errors.New("Manfiy son qabul qilinmaydi!")
 	}
 	return math.Sqrt(x), nil
-}
-
+} */
+/*
 type Car struct {
 	Make, Model, Color string
 	Year, Weight       int
 	Engine             engine
-}
-
+} */
+/*
 type engine struct {
 	name string
 	hp   int
+} */
+
+/* func str(strings...string){
+	fmt.Println(strings, " ")
+	total := ""
+
+	for _, strin := range strings {
+		total += strin
+	}
+	fmt.Println(total)
+} */
+
+func intSeq() func() int {
+	i := 0
+	return func() int {
+		i++
+		return i
+	}
 }
 
 func main() {
+	nextInt := intSeq()
+	fmt.Println(nextInt())
+	fmt.Println(nextInt())
+	fmt.Println(nextInt())
+
+	nextInts := intSeq()
+	fmt.Println(nextInts())
+
+	/* str("Go", "Python")
+	str("C++", "C#", "JavaScript")
+
+	strings := []string{"apple", "banana", "pear"}
+	str(strings...) */
+
 	// var myCar Car
-	myCar := Car{"BMW", "X1 M35i", "white", 2023, 1719, engine{"xDrive28i", 312}}
-	fmt.Println(myCar)
+	/* 	myCar := Car{"BMW", "X1 M35i", "white", 2023, 1719, engine{"xDrive28i", 312}}
+	   	fmt.Println(myCar) */
 
 	// result, err := sqrt(-1)
 	// if err != nil {
